@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/table";
 
 import { fetchLatestInvoices } from "@/lib/data";
+import Link from "next/link";
 
 export default async function Home() {
 	const latestInvoices = await fetchLatestInvoices();
@@ -65,9 +66,10 @@ export default async function Home() {
 			<div className="space-y-4">
 				{latestInvoices.map((invoice) => {
 					return (
-						<div
+						<Link
+							href={`/invoices/${invoice.id}`}
 							key={invoice.id}
-							className="flex justify-between items-center p-6 space-x-12 rounded-md bg-white shadow-sm transition-shadow hover:shadow-md">
+							className="flex justify-between items-center p-6 space-x-12 rounded-md bg-white border shadow-sm transition-all hover:shadow-md hover:border-purple-500">
 							<div className="flex items-center space-x-4">
 								<p className="text-slate-400">
 									#<span className="text-black font-bold">{invoice.id}</span>
@@ -77,12 +79,17 @@ export default async function Home() {
 							</div>
 							<div className="flex items-center space-x-4">
 								<p className="font-bold">{invoice.amount}</p>
-								<p className="px-2 py-1 rounded-sm bg-emerald-100 text-emerald-500 font-semibold text-center">
-									Paid
-								</p>
-								<p>#</p>
+								<div className="flex items-center justify-center w-20 px-2 py-1 rounded-sm bg-emerald-100 text-emerald-500 font-semibold text-center capitalize">
+									<div className="w-1 p-1 mr-1 bg-emerald-500 rounded-full"></div>
+									{invoice.status}
+								</div>
+								<Image
+									src="/assets/icon-arrow-right.svg"
+									width={7}
+									height={10}
+									alt="Arrow icon pointing right"></Image>
 							</div>
-						</div>
+						</Link>
 					);
 				})}
 			</div>
