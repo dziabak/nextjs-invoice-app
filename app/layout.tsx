@@ -11,6 +11,7 @@ const spartan = League_Spartan({ subsets: ["latin"], variable: "--spartan" });
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -24,14 +25,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={spartan.className}>
+			<body className={`${spartan.className} bg-c-background`}>
 				<div className="flex items-center justify-between p-4 bg-slate-700 lg:fixed lg:h-full lg:flex-col">
-					<Image
-						src="/assets/logo.svg"
-						width={28}
-						height={26}
-						alt="Invoice App Logo"></Image>
-
+					<Link href="/">
+						<Image
+							src="/assets/logo.svg"
+							width={28}
+							height={26}
+							alt="Invoice App Logo"></Image>
+					</Link>
 					<Avatar>
 						<AvatarImage src="/assets/image-avatar.jpg" />
 						<AvatarFallback>CN</AvatarFallback>

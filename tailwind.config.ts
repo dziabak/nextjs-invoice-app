@@ -16,7 +16,7 @@ const config = {
 			center: true,
 			padding: "2rem",
 			screens: {
-				"2xl": "1400px",
+				"2xl": "800px",
 			},
 		},
 		extend: {
@@ -24,6 +24,8 @@ const config = {
 			// 	sans: ["var(--spartan)", ...fontFamily.sans],
 			// },
 			colors: {
+				"c-background": "#f8f8fb",
+
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
