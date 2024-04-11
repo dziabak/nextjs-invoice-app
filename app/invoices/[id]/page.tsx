@@ -35,14 +35,6 @@ export default async function Page({ params }: { params: { id: string } }) {
 	return (
 		// <main className="flex min-h-screen flex-col items-center justify-center bg-slate-100">
 		<main className="container space-y-4">
-			{/* <p>42423424234234234234234234234242423: {invoice.amount}</p>
-			<p>42423424234234234234234234234242423: {invoice.customer_id}</p>
-			<p>42423424234234234234234234234242423: {invoice.id}</p>
-			<p>42423424234234234234234234234242423: {invoice.status}</p> */}
-			{/* <p>42423424234234234234234234234242423: {customers}</p> */}
-			{/* {customerName.map((customer) => (
-				<p key={customer.id}>111111111111111111111111:{customer.name}</p>
-			))} */}
 			<Card className="shadow-sm">
 				<div className="flex items-center justify-between p-4 space-x-4">
 					<p className="text-slate-400 font-medium">Status</p>

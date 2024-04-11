@@ -26,13 +26,15 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${spartan.className} bg-c-background`}>
-				<div className="flex items-center justify-between p-4 bg-slate-700 lg:fixed lg:h-full lg:flex-col">
+				<div className="flex items-center justify-between pr-8 bg-c-dark lg:fixed lg:h-full lg:flex-col lg:rounded-tr-2xl">
 					<Link href="/">
-						<Image
-							src="/assets/logo.svg"
-							width={28}
-							height={26}
-							alt="Invoice App Logo"></Image>
+						<div className="p-6 rounded-r-2xl bg-c-purple">
+							<Image
+								src="/assets/logo.svg"
+								width={28}
+								height={26}
+								alt="Invoice App Logo"></Image>
+						</div>
 					</Link>
 					<Avatar>
 						<AvatarImage src="/assets/image-avatar.jpg" />

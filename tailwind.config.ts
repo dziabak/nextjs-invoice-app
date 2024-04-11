@@ -24,7 +24,12 @@ const config = {
 			// 	sans: ["var(--spartan)", ...fontFamily.sans],
 			// },
 			colors: {
+				"c-dark": "#373B53",
 				"c-background": "#f8f8fb",
+				"c-purple": "#7C5DFA",
+				"c-purple-hover": "#9277FF",
+				"c-grey": "#888EB0",
+				"c-template": "#",
 
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
